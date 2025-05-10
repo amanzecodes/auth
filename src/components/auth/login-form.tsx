@@ -19,6 +19,7 @@ import { LoginSchema } from "../../../schemas";
 import { FormSuccess } from "./form-success";
 import { login } from "../../../actions/login";
 import Link from "next/link";
+import GoogleLogin from "./google-button";
 
 const LoginPage = () => {
   const [loading, setIsLoading] = useState(false);
@@ -103,7 +104,7 @@ const LoginPage = () => {
             </Button>
           </form>
         </Form>
-        {/* <GoogleLogin /> */}
+        <GoogleLogin/>
       </CardWrapper>
     </div>
   );

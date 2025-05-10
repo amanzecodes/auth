@@ -18,6 +18,7 @@ import { useState } from "react";
 import { FormSuccess } from "./form-success";
 import { FormError } from "./form-error";
 import { register } from "../../../actions/register";
+import GoogleLogin from "./google-button";
 
 const RegisterForm = () => {
   const [loading, setLoading] = useState(false);
@@ -126,7 +127,7 @@ const RegisterForm = () => {
           </Button>
         </form>
       </Form>
-      {/* <GoogleLogin /> */}
+      <GoogleLogin/>
     </CardWrapper>
     </div>
   )
