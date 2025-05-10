@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -56,8 +55,8 @@ const RegisterForm = () => {
      <CardWrapper
       headerLabel="Create an account"
       title="Register"
-      backButtonHref="/auth/login"
-      backButtonLabel="Already have an account"
+      backButtonHref="/login"
+      backButtonLabel="Already have an account?"
       showSocial
     >
       <Form {...form}>
