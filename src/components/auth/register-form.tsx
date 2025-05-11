@@ -122,7 +122,7 @@ const RegisterForm = () => {
           </div>
           <FormSuccess message={success} />
           <FormError message={error} />
-          <Button type="submit" className="w-full" disabled={loading}>
+          <Button type="submit" className="w-full cursor-pointer" disabled={loading}>
             {loading ? "Loading..." : "Register"}
           </Button>
         </form>
