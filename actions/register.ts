@@ -34,7 +34,7 @@ export const register = async(data: z.infer<typeof RegisterSchema>) => {
                 password: hashedPassword,
             }
         })
-        return { success: "User created successfully"};
+        return { success: "User created successfully", user};
     } catch (error) {
         console.error(error)
         return { error: "An error occurred while creating the user" };

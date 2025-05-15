@@ -19,6 +19,7 @@ import { FormSuccess } from "./form-success";
 import { FormError } from "./form-error";
 import { register } from "../../../actions/register";
 import GoogleLogin from "./google-button";
+import Router from "next/navigation";
 
 const RegisterForm = () => {
   const [loading, setLoading] = useState(false);
@@ -35,6 +36,8 @@ const RegisterForm = () => {
     },
   })
 
+  const router = Router.useRouter();
+
   const onSubmit = async(data: z.infer<typeof RegisterSchema>) => {
     setLoading(true);
     register(data).then((res) => {
@@ -47,6 +50,7 @@ const RegisterForm = () => {
         setSuccess(res.success);
         setError("");
         form.reset();
+        router.push("/login");
       }
       setLoading(false);
     })
